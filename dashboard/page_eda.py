@@ -158,8 +158,8 @@ def render():
                     texttemplate="%{text:,}",
                 )
             )
+            fig_mr.update_layout(**layout_kw)
             fig_mr.update_layout(
-                **layout_kw,
                 xaxis_title="Number of Ratings",
                 showlegend=False,
                 height=600,
@@ -183,8 +183,8 @@ def render():
                     textposition="outside",
                 )
             )
+            fig_hr.update_layout(**layout_kw)
             fig_hr.update_layout(
-                **layout_kw,
                 xaxis_title="Average Rating",
                 showlegend=False,
                 height=600,
