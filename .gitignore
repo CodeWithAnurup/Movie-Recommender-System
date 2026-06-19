@@ -20,3 +20,7 @@ Thumbs.db
 
 # Data (optional - uncomment if data is too large)
 # data/
+
+# Streamlit credentials
+.streamlit/credentials.toml
+
