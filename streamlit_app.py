@@ -52,21 +52,27 @@ with st.sidebar:
     st.caption("Author: Anurup Samanta")
 
 # ── Page routing ─────────────────────────────────────────────────
-if page == "📊 Overview":
+import re
+
+# Clean page name (remove leading emojis/symbols) for robust routing comparison
+clean_page = re.sub(r"^[^\w\s]+", "", page).strip()
+
+if clean_page == "Overview":
     from dashboard.page_overview import render
     render()
-elif page == "🔍 Exploratory Analysis":
+elif clean_page == "Exploratory Analysis":
     from dashboard.page_eda import render
     render()
-elif page == "🎯 Recommendations":
+elif clean_page == "Recommendations":
     from dashboard.page_recommendations import render
     render()
-elif page == "👤 User-Based":
+elif clean_page == "User-Based":
     from dashboard.page_user_based import render
     render()
-elif page == "🧮 SVD Analytics":
+elif clean_page == "SVD Analytics":
     from dashboard.page_svd import render
     render()
-elif page == "💼 Business Insights":
+elif clean_page == "Business Insights":
     from dashboard.page_business import render
     render()
+
