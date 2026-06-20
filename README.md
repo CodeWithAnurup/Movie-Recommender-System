@@ -315,18 +315,14 @@ jupyter notebook Movie_Recommender_System.ipynb
 
 ---
 
-## 👤 Author
+## 👤 Authors
 
 <div align="center">
 
-**Pritam Palit**
-
-*Electronics and Communication Engineering Graduate*
-
-*Focus Areas: Data Analytics, Machine Learning, Business Intelligence*
-
-[![GitHub](https://img.shields.io/badge/GitHub-PritamPalit--official-181717?style=for-the-badge&logo=github)](https://github.com/PritamPalit-official)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Pritam_Palit-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pritam-palit-77b2071b4/)
+| Author | Role | Profile |
+| :--- | :--- | :--- |
+| **Pritam Palit** | Original Creator & Data Scientist | [![GitHub](https://img.shields.io/badge/GitHub-PritamPalit--official-181717?style=for-the-badge&logo=github)](https://github.com/PritamPalit-official) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Pritam_Palit-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pritam-palit-77b2071b4/) |
+| **Anurup Samanta** | Dashboard Developer & Collaborator | [![GitHub](https://img.shields.io/badge/GitHub-CodeWithAnurup-181717?style=for-the-badge&logo=github)](https://github.com/CodeWithAnurup) |
 
 </div>
 
