@@ -23,6 +23,7 @@
 - [Dataset Description](#-dataset-description)
 - [Analysis & Methodology](#-analysis--methodology)
 - [Recommender Approaches](#-recommender-approaches)
+- [Streamlit Dashboard](#-streamlit-dashboard)
 - [Key Results](#-key-results)
 - [Questionnaire Answers](#-questionnaire-answers)
 - [Business Recommendations](#-business-recommendations)
@@ -199,16 +200,31 @@
 
 ---
 
+## 💻 Streamlit Dashboard
+
+A professional, production-ready interactive web application built with Streamlit and styled with a custom SaaS-like design (with native Light Mode default and a Dark Mode toggle).
+
+### 🖥️ Dashboard features:
+* **Overview page**: Displays key platform metrics (total ratings, users, movies, average rating) and user demographic highlights.
+* **Exploratory Data Analysis (EDA) page**: Fully interactive Plotly charts showcasing rating distributions, genre performance, user behaviors, decade releases, and movie correlations.
+* **Recommendation Engine page**: Live inputs allowing search-by-title and selection of recommendation algorithms (Pearson Correlation, Cosine Similarity + KNN, or Hybrid blend) to return recommended movie cards.
+* **User-Based page**: Prompting new users to rate popular movies to instantly find overlapping neighbor profiles and generate collaborative recommendation scores.
+* **SVD Analytics page**: Visualizations of latent-factor embeddings (d=2 PCA space, d=4 latent variables) and item profile heatmaps along with regression metrics (RMSE, MAPE).
+* **Business Insights page**: Segment analysis (AgeGroup × Gender), cold start playbooks, and strategic SaaS-like business advice cards.
+
+---
+
 ## 🛠️ Tools & Technologies
 
 | Category | Tools |
 |----------|-------|
 | **Language** | Python 3.11 |
 | **Data Analysis** | Pandas, NumPy |
-| **Visualization** | Matplotlib, Seaborn |
+| **Visualization** | Matplotlib, Seaborn, Plotly |
 | **Machine Learning** | scikit-learn (KNN, Cosine Similarity) |
 | **Matrix Factorization** | Surprise (SVD) |
 | **Statistical Analysis** | SciPy |
+| **Web Dashboard** | Streamlit |
 | **Notebook** | Jupyter Notebook |
 
 ---
@@ -220,9 +236,25 @@ Movie-Recommender-System/
 │
 ├── 📓 Movie_Recommender_System.ipynb   # Main analysis notebook
 ├── 📄 Movie_Recommender_System.py      # Python script version
+├── 💻 streamlit_app.py                 # Streamlit entry point
 ├── 📋 requirements.txt                 # Dependencies
 ├── 📝 README.md                        # This file
 ├── 🚫 .gitignore                       # Git ignore rules
+│
+├── 📂 .streamlit/
+│   └── ⚙️ config.toml                 # Streamlit theme & layout configs
+│
+├── 📂 dashboard/                       # Dashboard page modules & helpers
+│   ├── 📁 page_overview.py            # Overview charts & metrics
+│   ├── 📁 page_eda.py                 # Multi-tab EDA Plotly dashboards
+│   ├── 📁 page_recommendations.py     # Search & recommend live engines
+│   ├── 📁 page_user_based.py          # User rating onboarding
+│   ├── 📁 page_svd.py                 # Latent space & SVD heatmap
+│   ├── 📁 page_business.py            # Strategic cards & segments
+│   ├── 🛠️ data_loader.py              # Cached dataset pre-processing
+│   ├── 🛠️ models.py                   # Cached Surprise models
+│   ├── 🛠️ recommenders.py             # Collaborative filtering recommenders
+│   └── 🎨 styles.py                   # SaaS style cards & CSS themes
 │
 ├── 📂 data/
 │   ├── movies.dat                      # Movie info (3,883 movies)
@@ -267,6 +299,12 @@ venv\Scripts\activate     # Windows
 
 # Install dependencies
 pip install -r requirements.txt
+```
+
+### Run the Web Dashboard
+
+```bash
+python -m streamlit run streamlit_app.py
 ```
 
 ### Run the Notebook
